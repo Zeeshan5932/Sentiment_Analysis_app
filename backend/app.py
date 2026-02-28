@@ -17,8 +17,10 @@ nltk.download("stopwords")
 nltk.download("wordnet")
 
 
-model_path = "sentiment_model.joblib"
-model = joblib.load(model_path)
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+MODEL_PATH = os.path.join(BASE_DIR, "sentiment_model.joblib")
+
+model = joblib.load(MODEL_PATH)
 
 
 lemmatizer = WordNetLemmatizer()
